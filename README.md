@@ -112,6 +112,8 @@ print(result)
 
 ~~~
 <h3>Output</h3>
+<img width="641" height="288" alt="image" src="https://github.com/user-attachments/assets/27a6401c-f76f-4268-982a-f1969b67a682" />
+
 
 
 <hr>
