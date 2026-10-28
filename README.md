@@ -68,6 +68,52 @@ Now, Queue becomes empty, So, terminate these process of iteration.
 
 </ol>
 
+<h3>Ptogram</h3>
+
+~~~
+from collections import defaultdict, deque
+
+def bfs(graph, start):
+    visited = set()
+    queue = deque([start])
+    visited.add(start)
+
+    path = []
+
+    while queue:
+        node = queue.popleft()
+        path.append(node)
+
+        for neighbour in graph[node]:
+            if neighbour not in visited:
+                visited.add(neighbour)
+                queue.append(neighbour)
+
+    return path
+
+graph = defaultdict(list)
+
+n, e = map(int, input().split())
+
+start = None
+
+for i in range(e):
+    u, v = input().split()
+
+    if start is None:
+        start = u
+
+    graph[u].append(v)
+    graph[v].append(u)
+
+result = bfs(graph, start)
+
+print(result)
+
+~~~
+<h3>Output</h3>
+
+
 <hr>
 <h3>Sample Input</h3>
 <hr>
